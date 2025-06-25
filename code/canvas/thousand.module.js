@@ -1,4 +1,4 @@
-        import * as MAIN from "thousand.core.js" 
+        import * as MAIN from "https://cdn.jsdelivr.net/gh/Thousandjs/Thousand.js@1.3.2/code/canvas/thousand.core.js" 
         MAIN.require_files();
         var th = {
             canvas: null,
