@@ -21,6 +21,16 @@
                         this.p.fillRect(x,y,w,h)
                     }
                 }
+            },
+            ellips(x,y,w,c) {
+                this.p.beginPath();
+                this.p.fillStyle = c
+                this.p.arc(x,y,w,c,180,190)
+                this.p.fill();
+            },
+            arc(x,y,r,start,stop,c) {
+                this.p.beginPath();
+                this.p.fillStyle = "c"
             }
         }
         window.th = th;
