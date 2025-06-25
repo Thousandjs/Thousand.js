@@ -8,4 +8,4 @@ iniciar com th
 > arc  
 > id  
 > ellipse  
-> animation em function  
+> animation em function 
