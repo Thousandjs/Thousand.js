@@ -1,4 +1,5 @@
-        
+        import * as MAIN from "thousand.core.js" 
+        MAIN.require_files();
         var th = {
             canvas: null,
             p: null,
