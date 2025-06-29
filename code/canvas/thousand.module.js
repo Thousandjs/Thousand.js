@@ -50,6 +50,27 @@
                 this.p.beginPath();
                 this.p.arc(x,y,star,stop);
                 this.p.fillStyle = c
+            },
+            width(auto,width,height) {
+                if (this.p) {
+                    if (auto === "yes") {
+                        TH_WIDTH = "integer"
+                    }
+                    if (auto === "no") {
+                        TH_WIDTH = "defalt"
+                    }
+                }
+
             }
         }
         window.th = th;
+        const docs = {
+        if (TH_WIDTH === "integer") {
+          window.th.canvas.width = innerWidth
+          window.th.canvas.height = innerHeight
+        }
+        
+        }
+        docs()
+        window.setInterval(1000000, docs())
+        window.set
