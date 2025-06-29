@@ -1,4 +1,12 @@
+        const TD_REQUIRE = false
+        const DD_REQUIRE = true
+        const TH_WIDTH = "defalt"
 
+        const ElementsRequire = () => {
+        
+
+
+        }
         var th = {
             canvas: null,
             p: null,
@@ -7,6 +15,17 @@
                 this.canvas = document.getElementById(id)
                 if (this.canvas) {
                     this.p = this.canvas.getContext(ctx)
+                    if (this.p === "2d") {
+                        DD_REQURE = true
+                        TD_REQUIRE = false
+                    }
+                    if (this.p === "3d" || this.p === "webgl") {
+                        if (this.p === "3d") {
+                            this.p = this.canvas.getContext("webgl")
+                        }
+                        TD_REQUIRE = true
+                        DD_REQUIRE = false
+                    }
                 } else {
                     console.error(`[Thousand] Canvas com id "${id}" não encontrado no DOM.`)
                 }
@@ -29,7 +48,8 @@
             },
             arc(x,y,r,start,stop,c) {
                 this.p.beginPath();
-                this.p.fillStyle = "c"
+                this.p.arc(x,y,star,stop);
+                this.p.fillStyle = c
             }
         }
         window.th = th;
