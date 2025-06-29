@@ -73,4 +73,3 @@
         }
         docs()
         window.setInterval(1000000, docs())
-        window.set
