@@ -1,44 +1,21 @@
-        const TD_REQUIRE = false
+const TD_REQUIRE = false
         const DD_REQUIRE = true
         const TH_WIDTH = "defalt"
 
-        const ElementsRequire = () => {
-        
-
-
-        }
+        var canvascode = document.createElement("canvas")
+        canvascode.className = "thousand r137 1.3.7"
+        canvascode.width = innerWidth - 200
+        canvascode.height = innerHeight - 200
+        document.body.appendChild(canvascode)
         var th = {
-            canvas: null,
-            p: null,
-
-            id(id,ctx) {
-                this.canvas = document.getElementById(id)
-                if (this.canvas) {
-                    this.p = this.canvas.getContext(ctx)
-                    if (this.p === "2d") {
-                        DD_REQURE = true
-                        TD_REQUIRE = false
-                    }
-                    if (this.p === "3d" || this.p === "webgl") {
-                        if (this.p === "3d") {
-                            this.p = this.canvas.getContext("webgl")
-                        }
-                        TD_REQUIRE = true
-                        DD_REQUIRE = false
-                    }
-                } else {
-                    console.error(`[Thousand] Canvas com id "${id}" não encontrado no DOM.`)
-                }
-
-
-            },
-            rect(x,y,w,h,c) {
-                if (this.canvas && this.p) {
-                    if (x && y && w && h) {
-                        this.p.fillStyle = c
-                        this.p.fillRect(x,y,w,h)
-                    }
-                }
+            canvas: canvascode,
+            p: canvascode.getContext("2d"),
+            
+            fill(c) {
+                this.p.fillStyle = c;
+            } ,
+            rect(x,y,w,h,) {
+                    this.p.fillRect(x,y,w,h)
             },
             ellips(x,y,w,c) {
                 this.p.beginPath();
@@ -64,12 +41,4 @@
             }
         }
         window.th = th;
-        const docs = {
-        if (TH_WIDTH === "integer") {
-          window.th.canvas.width = innerWidth
-          window.th.canvas.height = innerHeight
-        }
-        
-        }
-        docs()
-        window.setInterval(1000000, docs())
+        export { th }
