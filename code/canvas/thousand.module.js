@@ -1,6 +1,6 @@
-const TD_REQUIRE = false
+        const TD_REQUIRE = false
         const DD_REQUIRE = true
-        const TH_WIDTH = "defalt"
+        var TH_WIDTH = "defalt"
 
         var canvascode = document.createElement("canvas")
         canvascode.className = "thousand r137 1.3.7"
