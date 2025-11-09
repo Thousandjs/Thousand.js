@@ -178,11 +178,6 @@ var THOUSAND = {
     loaderManagerFiles: function() {
         return CORE.LoaderManageFiles
     },
-    percentEl: function(num) {
-        const totalEmPx = document.querySelector('canvas[data-engine="Thousand.js 1.3.7"]').width; 
-        const valorEmPixels = (num / 100) * totalEmPx;
-        console.log(`O valor de ${porcentagemDesejada}% da largura total de ${totalEmPx}px é: ${valorEmPixels}px.`);
-    },
 }
 window.addEventListener('resize', () => {
     var canvas = thousandcanvas
