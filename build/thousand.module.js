@@ -156,8 +156,8 @@ var THOUSAND = {
 
             if (info) {
                 if (info.font) {
-                    self.font = `${info.font.font} ${info.font.size}`
-                    self.fillStyle = info.font.color
+                    self.font = `${info.font.font} ${info.size}`
+                    self.fillStyle = info.color
                 }
             }
 
@@ -178,6 +178,14 @@ var THOUSAND = {
     loaderManagerFiles: function() {
         return CORE.LoaderManageFiles
     },
+    info() {
+        console.log("InfoLog")
+        console.log("----------")
+        console.log("Version: 1.8.4")
+        console.log("CORE: 1.8.3")
+        console.log("PACKAGE_B: Github")
+        console.log("Finish process 0")
+    }
 }
 window.addEventListener('resize', () => {
     var canvas = thousandcanvas
